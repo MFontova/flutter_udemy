@@ -20,6 +20,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.plus_one),
         onPressed: () {
