@@ -27,15 +27,28 @@ class _CounterScreenState extends State<CounterScreen> {
           ],
         ),
       ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.plus_one),
-        onPressed: () {
-          counter++;
-          print('hello');
-          setState(() {});
-        },
-      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: const CustomFloatingActions(),
+    );
+  }
+}
+
+class CustomFloatingActions extends StatelessWidget {
+  const CustomFloatingActions({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: const [
+        FloatingActionButton(
+            child: Icon(Icons.exposure_minus_1_outlined), onPressed: null),
+        FloatingActionButton(child: Icon(Icons.exposure_zero), onPressed: null),
+        FloatingActionButton(
+            child: Icon(Icons.exposure_plus_1_outlined), onPressed: null)
+      ],
     );
   }
 }
