@@ -1,3 +1,4 @@
+import 'package:curso_udemy/screens/counter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_udemy/screens/home_screen.dart';
 
@@ -11,6 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: HomeScreen());
+      debugShowCheckedModeBanner: false,
+      // home: HomeScreen(),
+      home: CounterScreen(),
+    );
   }
 }
